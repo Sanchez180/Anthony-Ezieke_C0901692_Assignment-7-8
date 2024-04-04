@@ -1,0 +1,98 @@
+/*  G E N E R A L   S T Y L I N G */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+h2, .btn, #resultTxt{
+    text-transform: uppercase;
+}
+
+
+
+p, .btn, h2{
+    color: white;
+}
+
+/* M A I N   C O N T A I N E R */
+
+h2{
+    font-weight: bold;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+.mainContentContainer{
+    background: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainContent{
+    height: 100%;   
+    flex-direction: column;
+    text-align: center;
+}
+
+.diceContainer{
+    gap: 10px;
+    margin: 20px 0px 50px 0px;
+}
+
+.btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    background: grey;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: white;
+    color: black;
+    transition: 400ms;
+}
+
+.results{
+    margin-top: 20px;
+}
+
+
+/* A N I M A T I O N */
+.firstDiceRoll{
+    animation: roll1 1s ease-out forwards;
+  }
+  
+  @keyframes roll1 {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.secondDiceRoll{
+    animation: roll2 1s ease-in backwards;
+}
+
+@keyframes roll2 {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-90deg); }
+    50% { transform: rotate(-180deg); }
+    75% { transform: rotate(-270deg); }
+    100% { transform: rotate(-360deg); }    
+}
+
